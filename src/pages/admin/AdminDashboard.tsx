@@ -9,6 +9,7 @@ import { AdminOperationsHub } from './AdminOperationsHub';
 import { AdminBridgeHub } from './AdminBridgeHub';
 import { AdminRatesHub } from './AdminRatesHub';
 import { AdminSettlementsHub } from './AdminSettlementsHub';
+import { AdminStaffHub } from './AdminStaffHub';
 import { SettingsPanel } from '../merchant/SettingsPanel';
 
 export const AdminDashboard: React.FC = () => {
@@ -23,14 +24,20 @@ export const AdminDashboard: React.FC = () => {
       case 'analytics':
         return <AdminCommandCenter />;
 
-      // Merchants & Users
+      // Staff & RBAC Management
+      case 'staffManagement':
+      case 'staff':
+      case 'rbac':
+      case 'keyPeople':
+      case 'users':
+        return <AdminStaffHub />;
+
+      // Merchants & Enterprises
       case 'merchantsList':
       case 'merchants':
       case 'merchantCancelRequests':
       case 'bridgeMerchants':
       case 'manualCreditDebit':
-      case 'users':
-      case 'staffManagement':
       case 'enterprises':
       case 'enterpriseBuyTokens':
         return <AdminMerchantHub />;

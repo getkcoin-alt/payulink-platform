@@ -5,6 +5,7 @@ import { AuthProvider } from './context/AuthContext';
 import { RoleSwitcherBar } from './components/RoleSwitcherBar';
 import { MerchantDashboard } from './pages/merchant/MerchantDashboard';
 import { AdminDashboard } from './pages/admin/AdminDashboard';
+import { AdminLogin } from './pages/admin/AdminLogin';
 import { EnterpriseDashboard } from './pages/enterprise/EnterpriseDashboard';
 import { SupportPanel } from './pages/support/SupportPanel';
 import { DiscussPanel } from './pages/discuss/DiscussPanel';
@@ -23,7 +24,7 @@ export const App: React.FC = () => {
               <Route path="/" element={<Navigate to="/merchant/dashboard" replace />} />
               <Route path="/login" element={<Navigate to="/merchant/dashboard" replace />} />
               <Route path="/merchant/login" element={<Navigate to="/merchant/dashboard" replace />} />
-              <Route path="/admin/login" element={<Navigate to="/admin/dashboard" replace />} />
+              <Route path="/admin/login" element={<AdminLogin />} />
               <Route path="/enterprise/login" element={<Navigate to="/enterprise/dashboard" replace />} />
 
               {/* Merchant Portal */}
