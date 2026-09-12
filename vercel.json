@@ -1,6 +1,14 @@
 {
   "rewrites": [
     {
+      "source": "/api/:match*",
+      "destination": "https://api-service-production-2715.up.railway.app/api/:match*"
+    },
+    {
+      "source": "/health",
+      "destination": "https://api-service-production-2715.up.railway.app/health"
+    },
+    {
       "source": "/(.*)",
       "destination": "/"
     }
